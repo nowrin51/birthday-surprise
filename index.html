@@ -6,6 +6,7 @@
 <title>For Enan 💙</title>
 
 <style>
+/* Body and background */
 body {
     margin: 0;
     padding: 0;
@@ -17,11 +18,12 @@ body {
 
 /* Center container */
 .container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 /* Title */
@@ -29,6 +31,24 @@ h1 {
     font-size: 45px;
     color: white;
     text-shadow: 0 0 20px #0077ff;
+}
+
+/* Scrollable Message Box */
+.message-box {
+    max-height: 300px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+    color: #003366;
+    line-height: 1.6;
+    font-size: 18px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 25px #0077ff;
 }
 
 /* HEART GLASS BUTTON */
@@ -79,8 +99,8 @@ img {
 }
 
 .love-text {
-    font-size: 32px;
-    margin-top: 20px;
+    font-size: 22px;
+    margin-top: 15px;
     color: #003366;
     animation: glow 2s infinite alternate;
 }
@@ -105,25 +125,63 @@ img {
     50% { opacity: 1; }
     100% { transform: translateY(-110vh); opacity: 0; }
 }
+
+/* Scrollbar styling */
+.message-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.message-box::-webkit-scrollbar-thumb {
+    background: #0077ff;
+    border-radius: 4px;
+}
 </style>
 </head>
 
 <body>
 
 <audio id="bgMusic" loop>
-    <source src="enan1.mp3" type="audio/mpeg">
+    <source src="C:\Users\hp\Documents\tuition\enan1.mp3" type="audio/mpeg">
 </audio>
 
 <div class="container">
     <h1>💙 Happy Birthday Enan 💙</h1>
 
-    <button class="heart-btn" onclick="revealSurprise()">
-        💙
-    </button>
+   
 
+    <!-- Section-wise Message Box -->
+    <div class="message-box">
+        <p>Assalamualaikum amr future jamai....<br>
+        Happy birthday to my jaan ummaaahhh😘.<br>
+        Ami tomar birthday ni alws etw excited thaki bt tmr brtdy r din e ami dekha krte pari na...</p>
+
+        <p>Shomossa nai nxt year theke inshaallah eksthe korbo...<br>
+        Tomar moto spcl vabe ami krte pari na jodio😭😭..live korbo live 🥹.</p>
+
+        <p>Amr best frmd life partner shb kichu tmi..tmk ami onk onk onk jalai..hudai jhgra kri smtms tmr dosh na thkleo tmr sthe ami kechal kri😝....</p>
+
+        <p>Amr life ta etw shundor kre dwr jonno onk dhonnobad...ajibon amr hoi thakio joto kichu hoi jag😭....tmk onk smi onk rag krai ulta palta kre tmr rag barai di shb kichur jno sorry...</p>
+
+        <p>Tmr brtdy te wsh hcce tmi ektu caring ho mature ho bura tw hoccoi,,r dayitto nite shikhi😴😴..r shb theke boro wsh holo amk beshi beshi valobasha🥰🥰...</p>
+
+        <p>Ik amr jonno tmr life ta ro kothin hoi gece..tmr and tmr fmly dui side e...tmdr shb planning amr jnno chng hoi gece...</p>
+
+        <p>Why am choosing you?? Cause ami jani tmi ek banda j amr jnno shb krte parba🥹🥹...</p>
+
+        <p>Prai 4yrs frmdshp and 2yrs rltn..after rltn jkhn ja caici kre dco..ghurte ni gco onk..ber hole onk asha shopno puron krco...</p>
+
+        <p>Amr jonno best best best bf best jamai all tmi..alws erkm thakio r onk onk onk dua allah tmr shb iccha puron koruk tmr baba maar iccha puron koruk...</p>
+
+        <p>Jiboner shesh somoi prjnto tmr sthe thakte cai sheta allah j obsthai rakhuk na kn ami alws tmr sthe achi and alws inshaallah thkbo❤️..</p>
+    </div>
+
+        <!-- Heart Button -->
+    <button class="heart-btn" onclick="revealSurprise()">💙</button>
+
+    <!-- Surprise Image & Text -->
     <div id="surprise">
-        <img src="enan.jpg" alt="Our Memory">
-        <div class="love-text">💙 I Love You Enan 💙</div>
+        <img src="C:\Users\hp\Documents\tuition\enan.jpg" alt="Our Memory">
+        <div class="love-text">I love youuu i love you I love you sooo much.. I will marry you as soon as possible 🥹 💋</div>
     </div>
 </div>
 
@@ -148,6 +206,4 @@ for (let i = 0; i < 30; i++) {
 </script>
 
 </body>
-
 </html>
-
