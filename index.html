@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Enan 💙</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', cursive;
+    text-align: center;
+    background: linear-gradient(to top, #89CFF0, #E6F7FF);
+    overflow-x: hidden;
+}
+
+/* Center container */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title */
+h1 {
+    font-size: 45px;
+    color: white;
+    text-shadow: 0 0 20px #0077ff;
+}
+
+/* HEART GLASS BUTTON */
+.heart-btn {
+    margin-top: 30px;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    border: 2px solid white;
+    font-size: 40px;
+    cursor: pointer;
+    color: #0077ff;
+    box-shadow: 0 0 25px #0077ff;
+    transition: 0.4s;
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.heart-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px #00bfff;
+}
+
+/* Hidden Surprise */
+#surprise {
+    display: none;
+    margin-top: 40px;
+    animation: fadeZoom 1.5s ease forwards;
+}
+
+@keyframes fadeZoom {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+img {
+    width: 260px;
+    border-radius: 25px;
+    box-shadow: 0 0 40px #0077ff;
+}
+
+.love-text {
+    font-size: 32px;
+    margin-top: 20px;
+    color: #003366;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #0077ff; }
+    to { text-shadow: 0 0 25px #00bfff; }
+}
+
+/* Floating Hearts Background */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 18px;
+    animation: floatUp 8s linear infinite;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="C:\Users\hp\Documents\tuition\enan1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <h1>💙 Happy Birthday Enan 💙</h1>
+
+    <button class="heart-btn" onclick="revealSurprise()">
+        💙
+    </button>
+
+    <div id="surprise">
+        <img src="C:\Users\hp\Documents\tuition\enan.jpg" alt="Our Memory">
+        <div class="love-text">💙 I Love You Enan 💙</div>
+    </div>
+</div>
+
+<script>
+let music = document.getElementById("bgMusic");
+
+function revealSurprise() {
+    document.getElementById("surprise").style.display = "block";
+    music.play();
+}
+
+/* Floating Hearts */
+for (let i = 0; i < 30; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💙";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
